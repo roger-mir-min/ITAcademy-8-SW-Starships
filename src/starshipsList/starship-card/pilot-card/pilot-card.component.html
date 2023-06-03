@@ -1,0 +1,6 @@
+<div *ngIf="pilotsArr" class="mb-3 fw-bold">
+  PILOTS:
+  <span *ngFor="let pilot of pilotsArr" class="mx-1">
+    <img alt="pilot" src="{{ pilot.url }}" height="80em" />
+  </span>
+</div>

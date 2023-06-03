@@ -1,0 +1,62 @@
+<div class="row justify-content-center">
+  <div class="col-10 col-sm-7 col-md-6 col-lg-4">
+<form class="mt-4 jura" [formGroup]="signupForm" (ngSubmit)="submit(signupForm.value)">
+  <h1 class="mb-4 text-white">Sign up to enjoy <span class="text-warning">SW Catalogue</span></h1>
+    
+  <!-- Email input -->
+    <div class="form-outline mb-4">
+      <input type="email" id="form3Example1c" class="form-control" formControlName="inputEmail" data-testid="inputEmail" placeholder="name@example.com" [class.is-invalid] = "signupForm.get('inputEmail')!.invalid && signupForm.get('inputEmail')!.touched"/>
+      <div *ngIf="(getEmail!.invalid && getEmail!.touched) || getEmail!.dirty">
+      <small *ngIf="getEmail!.hasError!('required')" class="text-danger">Email is required.</small>
+      <small *ngIf="getEmail!.hasError!('pattern')" class="text-danger">Must be valid email.</small>
+    </div>
+      <label class="form-label text-grey" for="form3Example1c">Email address <i class="fas fa-envelope fa-lg me-3 fa-fw text-grey"></i></label>
+    </div>
+
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+      <input type="password" id="form3Example3c" class="form-control" formControlName="inputKey" data-testid="inputKey" [class.is-invalid] = "signupForm.get('inputKey')!.invalid && signupForm.get('inputKey')!.touched"/>
+      <div *ngIf="(getKey!.invalid && getKey!.touched) || getKey!.dirty">
+      <small *ngIf="getKey!.hasError!('required')" class="text-danger">Key is required.</small>
+      <small *ngIf="getKey!.hasError!('minlength')" class="text-danger">Key must have between 8 and 20 characters.</small>
+    </div>
+      <label class="form-label text-grey" for="form3Example3c">Password <i class="fas fa-key fa-lg me-3 fa-fw text-grey"></i></label>
+    </div>
+
+    <!-- Confirm password input -->
+    <div class="form-outline mb-4">
+      <input type="password" id="form3Example4cd" class="form-control" formControlName="inputRepKey" data-testid="inputRepKey" [class.is-invalid] = "signupForm.get('inputRepKey')!.invalid && signupForm.get('inputRepKey')!.touched"/>
+      <div *ngIf="(getRepKey!.invalid && getRepKey!.touched) || getRepKey!.dirty">
+      <small *ngIf="getRepKey!.hasError!('required')" class="text-danger">Key confirmation is required.</small>
+      <small *ngIf="getKey!.hasError!('minlength')" class="text-danger">Key must have between 8 and 20 characters.</small>
+      <small *ngIf="getRepKey!.hasError!('confValidator')" class="text-danger">Keys must match.</small>
+    </div>
+      <label class="form-label text-grey" for="form3Example4cd">Confirm password <i class="fas fa-key fa-lg me-3 fa-fw text-grey"></i></label>
+    </div>
+
+    <div *ngIf="registerSuccess==false" class="text-danger">This email is already registered.</div>
+    <button type="submit" class="btn btn-warning btn-block mb-4 w-100" data-testid="submitButton" [disabled]="!signupForm.valid">Sign up</button>
+    
+
+    <!-- <div class="text-center text-grey">
+    <p>You can also sign up with:</p>
+    <button type="button" class="btn btn-link btn-floating mx-1">
+      <i class="fa-brands fa-facebook text-grey hover"></i>
+    </button>
+
+    <button type="button" class="btn btn-link btn-floating mx-1 text-grey hover">
+      <i class="fab fa-google"></i>
+    </button>
+
+    <button type="button" class="btn btn-link btn-floating mx-1 text-grey hover">
+      <i class="fab fa-twitter"></i>
+    </button>
+
+    <button type="button" class="btn btn-link btn-floating mx-1 text-grey hover">
+      <i class="fab fa-github"></i>
+    </button>
+  </div> -->
+
+</form>
+</div>
+  </div>

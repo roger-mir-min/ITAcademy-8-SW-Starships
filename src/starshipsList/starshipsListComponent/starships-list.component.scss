@@ -1,0 +1,33 @@
+@import "./node_modules/bootstrap/scss/_functions";
+@import "./node_modules/bootstrap/scss/_variables";
+$greyish: #9d9992;
+$greys: #1c1e1dd2;
+
+.bg-grey{
+    background-color: $greys;
+}
+
+.text-greyish{
+    color: $greyish;
+}
+
+.jura{
+    font-family: "Jura";
+}
+
+// $custom-theme-colors: (
+//     $dark-grey: #5f8de9
+// );
+
+// $theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+.link-unstyled,
+.link-unstyled:link{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.link-unstyled:hover {
+    color: inherit;
+    text-decoration: underline;
+}

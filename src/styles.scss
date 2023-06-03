@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Jura";
+    src: local("Jura"), url(./assets/fonts/Jura-font.ttf) format("truetype");
+}
+@font-face {
+    font-family: "SW";
+    src: local("SW"), url(./assets/fonts/Starjedi.ttf) format("truetype");
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    background-image: url("assets/universe.webp");
+}

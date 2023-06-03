@@ -1,0 +1,6 @@
+<div *ngIf="filmsArr" class="fw-bold">FILMS: 
+<span *ngFor="let film of filmsArr" class="mx-1">
+    <img alt="film image" src="{{film.url}}" height="80em">
+    <!-- <p>{{film.title}}</p> -->
+</span>
+</div>

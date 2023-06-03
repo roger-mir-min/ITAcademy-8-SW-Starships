@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+  <div class="col-10 col-sm-7 col-md-6 col-lg-4">
+<form class="custom-center mt-4 jura" [formGroup]="logForm" (ngSubmit)="submit(logForm.value)">
+    <h1 class="mb-4 text-white">Login to enjoy the <span class="text-warning">SWS Catalogue</span></h1>
+
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <input type="email" id="form2Example1" class="form-control" formControlName="inputEmail" placeholder="name@example.com" [class.is-invalid] = "logForm.get('inputEmail')!.invalid && logForm.get('inputEmail')!.touched"/>
+    <div *ngIf="(getEmail!.invalid && getEmail!.touched) || getEmail!.dirty">
+    <small *ngIf="getEmail!.errors!['required']" class="text-danger">Email is required</small>
+  </div>
+    <label class="form-label text-grey" for="form2Example1">Email address</label><i class="fas fa-envelope fa-lg me-3 fa-fw text-grey"></i>
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <input type="password" id="form2Example2" class="form-control" formControlName="inputKey" [class.is-invalid] = "logForm.get('inputKey')!.invalid && logForm.get('inputKey')!.touched"/>
+    <div *ngIf="(getKey!.invalid && getKey!.touched) || getKey!.dirty">
+    <small *ngIf="logForm.get('inputKey')!.hasError('required')" class="text-danger">Key is required</small></div>
+    <label class="form-label text-grey" for="form2Example2">Password</label><i class="fas fa-key fa-lg me-3 fa-fw text-grey"></i>
+    <div *ngIf="userNotFoundError" class="text-danger">Incorrect email or password.</div>
+  </div>
+
+    <div class="col">
+      <!-- Simple link -->
+      <span class="text-grey hover" style="cursor: pointer; text-decoration: underline">Forgot password?</span>
+    </div>
+
+  <!-- Submit button -->
+  <button type="submit" [disabled]="!logForm.valid" class="btn btn-warning btn-block mb-4 w-100">Log in</button>
+
+
+  <!-- Register buttons -->
+  <div class="text-center text-grey">
+    <p>Not a member? <a routerLink="/signup" class="hover">Register</a></p>
+    <p>or sign up with:</p>
+    <button type="button" class="btn btn-link btn-floating mx-1 text-grey hover">
+      <i class="fa-brands fa-facebook"></i>
+    </button>
+
+    <button type="button" class="btn btn-link btn-floating mx-1 text-grey hover">
+      <i class="fab fa-google"></i>
+    </button>
+
+    <button type="button" class="btn btn-link btn-floating mx-1 text-grey hover">
+      <i class="fab fa-twitter"></i>
+    </button>
+
+    <button type="button" class="btn btn-link btn-floating mx-1 text-grey hover">
+      <i class="fab fa-github"></i>
+    </button>
+  </div>
+</form>
+</div>
+</div>

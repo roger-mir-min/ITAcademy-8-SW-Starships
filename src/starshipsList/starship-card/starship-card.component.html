@@ -1,0 +1,32 @@
+<div class="container-fluid text-white pt-3 pb-4">
+  <div class="row justify-content-center">
+    <div class="col-10 col-md-7">
+        <ng-container container *ngIf="starship">
+            <h1 class="text-center fw-bold">{{starship.name | uppercase}}</h1>
+            <img [alt]="altMsg" [src]="starship.img_url" (error)="handleMissingImage($event)" class="mb-4 w-100 d-block border-bottom border-primary">
+            <div *ngIf="noImg" class="mb-4 w-100 d-block border-bottom border-primary">{{altMsg}}</div>
+            <div class="row text-center mb-5">
+                <div data-testid="model" class="fw-bold">MODEL: <span class="text-secondary">{{starship.model  | uppercase}}</span></div>
+                <div data-testid="class" class="fw-bold">CLASS: <span class="text-secondary">{{starship.starship_class  | uppercase}}</span></div>
+                <div data-testid="manufacturer" class="fw-bold">MANUFACTURER: <span class="text-secondary">{{starship.manufacturer  | uppercase}}</span></div>
+                <div data-testid="cost" class="fw-bold">COST: <span class="text-secondary">{{starship.cost_in_credits  | uppercase}}</span></div>
+            </div>
+            <div class="row justify-content-center mb-5">
+                <div class="col-5 text-center">
+                <div data-testid="atmosphering" class="fw-bold">SPEED: <span class="text-secondary">{{starship.max_atmosphering_speed  | uppercase}}</span></div>
+                <div data-testid="hyperdrive" class="fw-bold">HYPERDRIVE RATING: <span class="text-secondary">{{starship.hyperdrive_rating  | uppercase}}</span></div>
+                <div data-testid="MGLT" class="fw-bold">MGLT: <span class="text-secondary">{{starship.MGLT  | uppercase}}</span></div>
+                </div>
+                <div class="col-5 text-center">
+                <div data-testid="length" class="fw-bold">LENGTH: <span class="text-secondary">{{starship.length  | uppercase}}</span></div>
+                <div data-testid="crew" class="fw-bold">CREW: <span class="text-secondary">{{starship.crew  | uppercase}}</span></div>
+                <div data-testid="capacity" class="fw-bold">CARGO CAPACITY: <span class="text-secondary">{{starship.cargo_capacity  | uppercase}}</span></div>
+                </div>
+            </div>
+            
+            <app-pilot-card [data]="starship"></app-pilot-card>
+            <app-films-component [data]="starship"></app-films-component>
+        </ng-container>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+.link-unstyled,
+.link-unstyled:link,
+.link-unstyled:hover {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.jura {
+    font-family: "Jura";
+}
+
+.sw{
+    font-family: "SW";
+}
+
+.bd{
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.hover-white:hover{
+    color: white !important;
+    cursor: pointer;
+}
+
+.bdd{
+    border-right: 1px solid white;
+}
+
+@media only screen and (max-width: 992px) {
+    .auth{
+        position: static;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+    .auth{
+        position: absolute;
+    }
+
+}

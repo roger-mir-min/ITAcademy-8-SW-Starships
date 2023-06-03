@@ -1,0 +1,12 @@
+<div class="container-fluid pt-4">
+  <div class="row justify-content-center">
+    <div class="col-10 col-md-7">
+      <div class="jura" infinite-scroll [infiniteScrollDistance]="distance" [infiniteScrollThrottle]="throttle" (scrolled)="onScroll()">
+        <div class="bg-grey text-greyish p-2 mb-3 rounded" *ngFor="let starship of starshipsList" data-testid="divFor">
+          <a routerLink="{{starship.id}}" class="link-unstyled fw-bold">{{starship.name | uppercase}}</a>
+          <div style="font-size:0.9em">{{starship.model}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

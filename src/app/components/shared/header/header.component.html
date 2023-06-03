@@ -1,0 +1,19 @@
+<div class="container-fluid g-0 text-white jura">
+  <div class="row g-0 justify-content-center">
+            <div class="row g-0 align-items-center position-relative">
+                <img src="assets/logoSW.png" alt="logo" class="d-block mx-auto py-2" style="max-width:13em">
+                <div class="col-3 col-lg-2 g-0 text-center position-absolute auth" style="right:0">
+                  <a *ngIf="isLoggedIn==true" (click)="unlog()" class="d-block d-sm-inline text-secondary link-unstyled p-1 hover-white">UNLOG</a>
+                  <a *ngIf="isLoggedIn==false" routerLink="login" class="d-block d-sm-inline text-secondary link-unstyled p-1 hover-white">LOGIN</a>
+                  <a *ngIf="isLoggedIn==false" routerLink="signup" class="text-secondary link-unstyled p-2 hover-white fw-bold">SIGN UP</a>
+                </div>
+            </div>
+            <div class="row g-0 justify-content-center">
+              <div class="text-center p-1 border-top border-bottom">
+                <a routerLink="" class="col-1 g-0 text-secondary link-unstyled py-2 px-3 bd hover-white">HOME</a>
+                <a routerLink="starshipsList" class="col-1 g-0 text-secondary link-unstyled py-2 px-3 bdd hover-white">STARSHIPS</a>
+              </div>
+            </div>
+  </div>
+  <div *ngIf="isLoggedIn==true" class="text-secondary p-1" style="font-size:0.9em">User logged in with email "{{currentUser.email}}"</div>
+</div>
