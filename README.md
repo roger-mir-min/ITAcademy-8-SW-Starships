@@ -10,6 +10,11 @@ Result of the Sprint 8 at IT Academy.
 ## Stack
 Angular, SASS - Bootstrap
 
+## Usage
+Log in to access the star wars list, then click "Press to start".
+Sign up if you haven't already. You will be instantly logged in and redirected to the list of Star Wars starships.
+Once you have access to the starships list, you can scroll to load more starships. Pick (click) one. A card will be displayed with detailed information (image, model, class, manufacturer...). Often some data is missing (this comes from the mentioned API's).
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
