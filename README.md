@@ -10,6 +10,10 @@ Result of the Sprint 8 at IT Academy.
 ## Stack
 Angular, SASS - Bootstrap
 
+## Installing
+1. Clone this repository https://github.com/roger-mir-min/ITAcademy-8-SW-Starships.git
+2. Install node_modules with "npm i" command
+
 ## Usage
 Log in to access the star wars list, then click "Press to start".
 Sign up if you haven't already. You will be instantly logged in and redirected to the list of Star Wars starships.
