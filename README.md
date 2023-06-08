@@ -4,6 +4,9 @@ Users can signup and then signin in order to access informational cards about St
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
 This project was deployed with Github Pages.
 
+## Background
+Result of the Sprint 8 at IT Academy.
+
 ## Stack
 Angular, SASS - Bootstrap
 
