@@ -2,6 +2,7 @@
 Users can signup and then signin in order to access informational cards about Star Wars movies, which are fetched from the APIs from https://swapi.dev/ and https://starwars-visualguide.com/#/. It is a static site: the authentication process is done with localstorage, not a real backend.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
+This project was deployed with Github Pages.
 
 ## Development server
 
